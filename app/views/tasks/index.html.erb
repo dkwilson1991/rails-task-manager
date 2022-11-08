@@ -1,0 +1,15 @@
+<div class="container d-flex justify-content-center">
+  <div class="card p-5 w-50">
+    <div class="card-header">
+          <h1 class="text-center">My Tasks</h1>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <% @tasks.each do |task| %>
+            <li class="list-group-item"><%= link_to task.title, task_path(task) %></li>
+          <% end %>
+        </ul>
+        <button><%= link_to "Create New Task", new_task_path, class: 'btn btn-light' %></button>
+      </div>
+    </div>
+  </div>
+</div>
